@@ -1,11 +1,18 @@
-# basic options
-title: Your awesome title
-author: GitHub User
-email: your-email@domain.com
-description: A wonderful site
-twitter_username: jekyllrb
-github_username:  jekyll
+name: Thomas Lam
+description: Math ∧ Programming ∧ Life
+meta_description: "Your New Jekyll Site, Blogging about stuffs"
+plugins: [jekyll-paginate]
 
-# Build settings
-markdown: kramdown
-theme: jekyll-theme-minimal
+markdown: redcarpet
+highlighter: rouge
+logo: false
+paginate: 15
+paginate_path: '/blog/page:num'
+baseurl: /
+domain_name: 'http://yourblog-domain.com'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus_shortname: 'thomaslam'
+
+# Details for the RSS feed generator
+url:            'blog url'
+author:         'Thomas Lam'
