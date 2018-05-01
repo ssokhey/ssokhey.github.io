@@ -1,7 +1,7 @@
 {
   "name": "new-personal-website",
   "version": "3.0.0",
-  "description": "My website code",
+  "description": "My Portfolio",
   "main": "server.js",
   "dependencies": {
     "mime": "^1.3.4"
@@ -11,6 +11,6 @@
     "test": "echo 'test'",
     "start": "node server.js"
   },
-  "author": "Thomas Lam",
+  "author": "Shivkaran Singh",
   "license": "ISC"
 }

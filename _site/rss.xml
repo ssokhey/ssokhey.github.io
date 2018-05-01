@@ -5,7 +5,7 @@
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
   xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
   <channel>
-    <title>Thomas Lam</title>
+    <title>Shivkaran Singh</title>
     <link>http://localhost:4000</link>
     <description>Math ∧ Programming ∧ Life</description>
     <pubDate>Mon, 23 Nov 2015 04:35:00 +0530</pubDate>
@@ -14,42 +14,6 @@
       <link>http://localhost:4000/programming/internship/career/2015/11/23/my-first-technical-interview.html</link>
       <pubDate>Mon, 23 Nov 2015 04:35:00 +0530</pubDate>
       <dc:date>2015-11-23T04:35:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>Haskell - functional fun</title>
-      <link>http://localhost:4000/haskell/programming/2015/10/18/Haskell-functional-fun.html</link>
-      <pubDate>Sun, 18 Oct 2015 22:00:00 +0530</pubDate>
-      <dc:date>2015-10-18T22:00:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>My struggle with Vim</title>
-      <link>http://localhost:4000/2015/10/12/my-struggle-with-Vim.html</link>
-      <pubDate>Mon, 12 Oct 2015 05:12:00 +0530</pubDate>
-      <dc:date>2015-10-12T05:12:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>Live reload with Guard and nodemon</title>
-      <link>http://localhost:4000/programming/webdev/tricks/2015/07/23/live-reload-trick.html</link>
-      <pubDate>Thu, 23 Jul 2015 19:53:00 +0530</pubDate>
-      <dc:date>2015-07-23T19:53:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>On pair programming</title>
-      <link>http://localhost:4000/programming/hackreactor/2015/05/24/on-pair-programming.html</link>
-      <pubDate>Sun, 24 May 2015 05:51:00 +0530</pubDate>
-      <dc:date>2015-05-24T05:51:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>Difference between __proto__ and prototype in javascript</title>
-      <link>http://localhost:4000/javascript/hackreactor/2015/05/18/difference-between-__proto__-and-prototype-javascript.html</link>
-      <pubDate>Mon, 18 May 2015 02:30:00 +0530</pubDate>
-      <dc:date>2015-05-18T02:30:00+05:30</dc:date>
-    </item>
-    <item>
-      <title>First blog post!</title>
-      <link>http://localhost:4000/2015/03/07/first-blog-post.html</link>
-      <pubDate>Sat, 07 Mar 2015 08:12:00 +0530</pubDate>
-      <dc:date>2015-03-07T08:12:00+05:30</dc:date>
     </item>
     <dc:date>2015-11-23T04:35:00+05:30</dc:date>
   </channel>
