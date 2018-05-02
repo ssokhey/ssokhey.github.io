@@ -1,91 +1,49 @@
 ---
-layout: default
-disqus: false
-archive: false
-post_class: post-template
+layout: page
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}blog">Main</a>
-    </nav>
-</header>
+{% if page.image and page.headerImage %}
+    <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
+{% endif %}
 
-<main class="content" role="main">
+<h1 class="title">{{ page.title }}</h1>
 
-    <article class="post">
+<span class="date">
+    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
+    {% if site.read-time %} - {% include read-time.html %}{% endif %}
+</span>
 
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">                
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-                {% if page.categories.size > 0 %} 
-                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }} 
-                {% endif %}
-            </section>
-        </header>
+{% if site.show-tags %}
+    <div class="post-tags">
+        {% for tag in page.tags %}
+            <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+{% endif %}
 
-<!--         <header class="post-header">
-            <a id="blog-logo" href="{{site.url}}">
-                {% if site.logo %}
-                    <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%} 
-            </a>
-        </header> -->
-        
-        <!-- <span class="post-meta">
-            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-            {% if page.categories.size > 0 %} 
-                {{ page.categories | array_to_sentence_string | prepend: 'on ' }} 
-            {% endif %}
-        </span> -->
+{{content}}
 
-        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
-
-        <section class="post-content">
-            {{content}}
-        </section>
-
-        {% if page.archive %}
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}    
-            </ul>
-        </section>
+{% if site.post-advance-links contains page.category %}
+    <div class="blog-navigation">
+        {% if page.previous.url %}
+            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+        {% else %}
+            <a class="prev"></a>
         {% endif %}
+        {% if page.next.url %}
+            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+        {% endif %}
+    </div>
+{% endif %}
 
-        <footer class="post-footer">
-            <!-- If we want to display author's name and bio -->
-            {% if site.author %}
-                <figure class="author-image">
-                    <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile-img.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
-                </figure>
-                <section class="author">
-                    <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
-                    <!-- Author Bio -->
-                    <p> 
-                        Here goes the author description. You might want to place some links too in here
-                    </p>
-                </section>                
-            {% endif %}
+{% if site.related %}
+    {% include related.html %}
+{% endif %}
 
-            <!-- Share links section -->
-            {% include share.html %}
-            
-            <!-- Disqus comments -->
-            <!--{% if page.disqus %}-->
-                {% include disqus.html %}
-            <!--{% endif %}-->
-            
-        </footer>
+{% if site.show-author %}
+    {% include author.html %}
+{% endif %}
 
-    </article>
-
-</main>
+{% if site.disqus.categories contains page.category %}
+    {% include disqus.html %}
+{% endif %}

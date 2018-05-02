@@ -1,18 +1,105 @@
-name: AI Blog
-description: NLP • ML • DL
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
-plugins: [jekyll-paginate]
+# main text of home
+name: Shivkaran Singh
+bio: "I.. a universe of atoms, an atom in the universe."
 
-markdown: redcarpet
-highlighter: rouge
-logo: false
-paginate: 15
-paginate_path: '/blog/page:num'
-baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus_shortname: 'shivkaran'
+# twitter summary info
+description: A blog about technology and stuff related
 
-# Details for the RSS feed generator
-url:            'blog url'
-author:         'Shivkaran Singh'
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/profile.jpg
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: true
+#resume-external: true
+resume-url: assets/cv.pdf
+
+url: https://koppl.in/indigo
+# your url: http://ssokhey.github.io
+
+permalink: /:title/
+
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
+
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
+
+# if you don't want comments in your posts, leave categories empty
+disqus:
+  shortname: shivkaran_singh # enter this from your disqus account
+  categories: [blog, project] # only show disqus for posts that have these categories
+
+# if you don't have any of social below, comment the line
+linkedin: shivkaran-singh-b9b752104
+github: ssokhey
+#twitter: 9pyrrhic
+email: shivkaran.ssokhey@gmail.com
+#facebook: myfacebook
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+# youtube: myyoutube
+# spotify: myspotify
+# lastfm: mylastfm
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+# reddit: username
+#medium: medium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+
+
+authors:
+    singh:
+        name: Shivkaran Singh
+        bio: Premature optimization is the root of all evil
+        external-image: false
+        picture: assets/images/profile.jpg
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: large
+
+# if you don't need pagination, comment the *paginate* configs below
+# paginate: 5
+# paginate_path: "blog/:num/"
+
+# if you don't need projects, comment the *projects* configs below
+projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-admin
+
+jekyll-mentions:
+    base_url: https://github.com
